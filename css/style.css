@@ -1,0 +1,586 @@
+:root {
+    --white: #ffffff;
+    --dark: #212121;
+    --primary: #FFC107;
+    --secundary: #0097a7;
+    --grease: #757575;
+    --blue-console: #48CAE4;
+
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.spacer {
+    display: flex;
+    margin: 40px;
+}
+
+body {
+    font-family: 'Press Start 2P', Verdana;
+    background-color: var(--dark);
+    color: var(--blue-console)
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 15px;
+}
+
+h3 {
+    color: var(--blue-console);
+    font-size: 15px;
+
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-family: 'Press Start 2P', Verdana;
+}
+
+.title{
+    padding: 2rem;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: 0px 0px 28px 1px rgba(72,202,228,1);
+    background-color: var(--blue-console);
+}
+
+.navButton {
+    font-size: 15px;
+    color: var(--dark);
+    text-decoration: none;
+    padding: 20px;
+}
+
+.navButton:hover {
+    background-color: var(--dark);
+    color: var(--blue-console);
+}
+
+.dropdownMenu {
+    align-self: center;
+    display: none;
+}
+
+/* Content hero */
+.hero {
+	height: 500px;
+	position: relative;
+}
+
+/* This hero::before gives opacity to image but not text */
+.hero::before {    
+    content: "";
+    background-image: url("/img/hero-image.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+}
+
+.content-hero {
+	position: absolute;
+	width: 100%;
+	height: 500px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.webDevelopment {
+    color: #ffffff;
+    margin: 20px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    font-size: 13px;
+}
+
+
+.myServices, .myAboutMe, .myProjects {
+    background-color: var(--blue-console);
+    color: var(--dark);
+    box-shadow: 0px 0px 28px 1px rgba(72,202,228,1);
+    padding: 20px;
+}
+
+/* About me */
+.aboutMe {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 500px;
+    align-items: center;
+    padding: 40px 150px;
+}
+
+.aboutMeText {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    row-gap: 30px;
+    height: auto;
+    width: 50%;
+    padding: 20px;
+}
+
+.aboutMeText p {
+    font-family: 'Segoe UI';
+    font-size: 13px;
+    color: white;
+    width: auto;
+    text-align: justify;
+}
+
+
+/* Projects */
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 150px;
+    row-gap: 40px;
+}
+
+.project1, .project2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.project1-img {
+    grid-column:  1 / 2;
+    grid-row: 1 / 2;
+    text-align: center;
+}
+
+.project1-img img, .project2-img img {
+    width: 300px;
+}
+
+.project1-text h3, .project2-text h3 {
+    font-size: 14px;
+}
+.project1-text {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.project1-text, .project2-text {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI';
+    font-size: 13px;
+    color: white;
+    width: auto;
+    text-align: justify;
+    row-gap: 20px;
+    justify-self: center;
+    padding: 20px;
+    width: 50%;
+}
+
+.project2-text {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.project2-img {
+    grid-column:  1 / 2;
+    grid-row: 2 / 3;
+    text-align: center;
+}
+
+/* Services */
+.services {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 300px;
+    column-gap: 10px;
+    padding: 40px 150px;
+}
+.service-1, .service-2 {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 20px;
+}
+
+.serviceDescription {
+    width: 50%;
+    text-align: justify;
+    color: white;
+    font-family: 'Segoe UI';
+    font-size: 14px;
+}
+
+/* Contact Button */
+.myMailContact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 150px;
+}
+
+.myMailContact p {
+    width: 25%;
+    text-align: justify;
+    color: white;
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    padding: 20px;
+}
+
+.contactButton, .formularyButton{
+    background-color: var(--blue-console);
+    padding: 15px;
+    margin: 20px;
+    text-decoration: none;
+    color: var(--dark);
+    width: auto;
+    text-align: center;
+    border: none;
+    font-size: 13px;
+}
+    
+.contactButton:visited {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.contactButton:hover {
+    background-color: var(--dark);
+    color: var(--blue-console);
+}
+.myContact {
+    background-color: var(--blue-console);
+    color: var(--dark);
+    box-shadow: 0px 0px 28px 1px rgba(72,202,228,1);
+    padding: 20px;
+}
+
+/* Formulary */
+.contactForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.formulary {
+    margin: 20px;
+    padding: 2rem;
+}
+
+
+.formulary legend {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.fieldContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 100px 100px 100px;
+    width: auto;
+    align-items: start;
+    column-gap: 10px;
+}
+
+.field-name {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+}
+
+.field-phone {
+    grid-column: 1 / 2;
+    grid-row: 2 / 2;
+}
+
+.field-mail {
+    grid-column: 1 / 1;
+    grid-row: 3 / 3;
+}
+
+.field-message {
+    grid-column: 2 / 2;
+    grid-row: 1 / 1;
+
+}
+
+.field-button {
+    grid-column: 2 / 1
+}
+
+.field {
+    margin: 10px;
+    font-size: 13px;
+}
+
+.field label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+.field textarea {
+    height: 240px;
+}
+
+input, textarea {
+    padding: 10px;
+    width: 300px;
+}
+
+input:focus, textarea:focus {
+    outline-color: #0097a7;
+    outline-style: groove;
+    outline-width: 2px;
+}
+
+.formularyButton {
+    margin: 10px;
+}
+
+.formularyButton:focus {
+    outline: 0;
+}
+
+.formularyButton:hover {
+    cursor: pointer;
+}
+
+.to-top {
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.to-top.active {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.to-top:hover {
+    transform: translateY(-4px);
+}
+
+/* Footer */
+.myFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 40px;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* --------------------------------------------------------------------- */
+
+/* MOBILE SCREEN */
+@media (max-width: 600px) {
+    .nav {
+        display:grid;
+        justify-content: center;
+        text-align: center;
+    }
+    .navButton {
+        padding: 4.25px;
+    }
+}
+
+@media (max-width: 640px) {
+    .navButton {
+        display: none;
+    }
+    .nav {
+        justify-content: end;
+    }
+    .dropdownMenu {
+        position: relative;
+        display: flex;
+    }
+    .dropbtn {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        margin: 10px 20px;
+    }
+    .dropdownItem {
+        font-size: 13px;
+        color: var(--blue-console);
+        text-decoration: none;
+        padding: 20px 30px;
+    }
+    .dropdownItem:hover {
+        background-color: var(--blue-console);
+        color: var(--dark);
+    }
+    .dropdownItem:visited {
+        color: var(--blue-console);
+        background-color: var(--dark);
+    }
+    .dropdownContent {
+        height: auto;
+        width: auto;
+        z-index: 1;
+        background-color: #212121;
+        position: absolute;
+        right: 0px;
+        top: 58px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .aboutMe {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .aboutMeText, .project1-text, .project2-text, .serviceDescription {
+        width: 90%;
+    }
+    .projects {
+        padding: 20px;
+        margin: 40px 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    .project1-img, .project2-img {
+        text-align: center;
+    }
+    .project1-img img, .project2-img img {
+        width: 70%;
+    }
+    .project1-text, .project2-text {
+        width: 80%;
+    }
+    .services {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        margin: 40px 0px;
+        align-items: center;
+        width: auto;
+        row-gap: 40px;
+    }
+    .service-1, .service-2 {
+        display: flex;
+        flex-direction: column;
+        justify-items: space-around;
+        height: 200px;
+        padding: 0px;
+        margin: 0px;
+        width: 90%;
+    }
+    .myMailContact {
+        margin: 20px 0px;
+        padding: 20px;
+    }
+    .myMailContact p {
+        width: 90%;
+    }
+    footer p {
+        font-size: 10px;
+    }
+}
+
+/* --------------------------------------------------------------------- */
+
+/* TABLET SCREEN */
+@media (min-width: 641px) and (max-width: 1200px) {
+    .aboutMe {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .aboutMeText {
+        width: 80%;
+    }
+    .projects {
+        padding: 20px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .project1-img, .project2-img {
+        text-align: center;
+    }
+    .project1-img img, .project2-img img {
+        width: 300px;
+    }
+    .project1-text, .project2-text {
+        width: 80%;
+    }
+    .services {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        align-items: center;
+        width: auto;
+        padding: 20px;
+        row-gap: 40px;
+    }
+    .service-1, .service-2 {
+        display: flex;
+        flex-direction: column;
+        justify-items: space-around;
+        height: 200px;
+        padding: 0px;
+        margin: 0px;
+        width: 60%;
+    }
+    .serviceDescription {
+        width: auto;
+        text-align: justify;
+    }
+    .myMailContact {
+        margin: 20px 0px;
+        padding: 20px;
+    }
+    .myMailContact p {
+        width: 80%;
+    }
+}
